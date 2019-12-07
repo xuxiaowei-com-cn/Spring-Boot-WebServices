@@ -6,6 +6,7 @@ import cn.com.xuxiaowei.service.TestUser1Service;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.jws.WebService;
 
 /**
  * 测试 服务接口实现类
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
  * @author xuxiaowei
  */
 @Service
+@WebService(targetNamespace = "http://xuxiaowei.com.cn")
 public class TestUser1ServiceImpl implements TestUser1Service {
 
     @Resource

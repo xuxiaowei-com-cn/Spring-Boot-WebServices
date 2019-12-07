@@ -1,5 +1,6 @@
 package cn.com.xuxiaowei.configuration;
 
+import cn.com.xuxiaowei.service.TestUser1Service;
 import cn.com.xuxiaowei.service.WebServicesTestService;
 import org.apache.cxf.Bus;
 import org.apache.cxf.bus.spring.SpringBus;
@@ -26,13 +27,20 @@ public class WebServiceConfiguration {
     private final WebServicesTestService webServicesTestService;
 
     /**
+     * 测试 服务接口
+     */
+    private final TestUser1Service testUser1Service;
+
+    /**
      * 注入
      *
      * @param webServicesTestService WebService 测试接口
+     * @param testUser1Service       测试 服务接口
      */
     @Autowired
-    public WebServiceConfiguration(WebServicesTestService webServicesTestService) {
+    public WebServiceConfiguration(WebServicesTestService webServicesTestService, TestUser1Service testUser1Service) {
         this.webServicesTestService = webServicesTestService;
+        this.testUser1Service = testUser1Service;
     }
 
     /**
@@ -59,6 +67,16 @@ public class WebServiceConfiguration {
         EndpointImpl testWebServiceEndpointImpl = new EndpointImpl(springBus(), webServicesTestService);
         testWebServiceEndpointImpl.publish("/testWebService");
         return testWebServiceEndpointImpl;
+    }
+
+    /**
+     * 注册服务：用于测试的 用户 服务接口
+     */
+    @Bean
+    public Endpoint testUser1ServiceEndpoint() {
+        EndpointImpl testUser1ServiceEndpointImpl = new EndpointImpl(springBus(), testUser1Service);
+        testUser1ServiceEndpointImpl.publish("/testUser1Service");
+        return testUser1ServiceEndpointImpl;
     }
 
 }
