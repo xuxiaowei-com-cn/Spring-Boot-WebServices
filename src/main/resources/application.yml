@@ -19,3 +19,10 @@ spring:
     # 数据库 密码
     password: TESTSERVICE
 #
+# MyBatis 配置
+mybatis:
+  # Mapper XML 文件路径
+  mapper-locations: mapper/*Mapper.xml
+  # 实体类路径，可在 Mapper 中使用 实体类名，而非全限定名
+  type-aliases-package: cn.com.xuxiaowei.entity
+#
