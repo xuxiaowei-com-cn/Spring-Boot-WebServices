@@ -8,6 +8,7 @@ import javax.jws.WebService;
  * WebService 测试接口
  *
  * @author xuxiaowei
+ * @since 0.0.1
  */
 @WebService
 public interface WebServicesTestService {

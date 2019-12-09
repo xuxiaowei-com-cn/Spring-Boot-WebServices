@@ -6,6 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * 测试自动生成
+ *
+ * @author xuxiaowei
+ * @since 0.0.1
  */
 @SpringBootTest
 public class ITestServiceTests {

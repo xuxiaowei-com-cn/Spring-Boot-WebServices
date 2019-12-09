@@ -19,6 +19,7 @@ import java.util.Scanner;
  * MyBatis Plus 代码生成器
  *
  * @author xuxiaowei
+ * @since 0.0.1
  */
 public class MyBatisPlusGenerator {
 

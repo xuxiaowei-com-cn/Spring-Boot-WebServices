@@ -12,6 +12,7 @@ import javax.jws.WebService;
  * 测试 服务接口实现类
  *
  * @author xuxiaowei
+ * @since 0.0.1
  */
 @Service
 @WebService(targetNamespace = "http://xuxiaowei.com.cn")

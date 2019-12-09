@@ -10,6 +10,7 @@ import javax.jws.WebService;
  * 测试 服务接口
  *
  * @author xuxiaowei
+ * @since 0.0.1
  */
 @WebService
 public interface TestUser1Service {
