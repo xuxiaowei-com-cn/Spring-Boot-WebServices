@@ -17,6 +17,7 @@ import javax.xml.ws.Endpoint;
  * WebServices 配置
  *
  * @author xuxiaowei
+ * @since 0.0.1
  */
 @Configuration
 public class WebServiceConfiguration {
