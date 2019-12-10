@@ -1,5 +1,6 @@
 package cn.com.xuxiaowei.configuration;
 
+import cn.com.xuxiaowei.handlerinterceptor.WebServicesHandlerInterceptor;
 import cn.com.xuxiaowei.service.TestUser1Service;
 import cn.com.xuxiaowei.service.WebServicesTestService;
 import org.apache.cxf.Bus;
@@ -71,12 +72,26 @@ public class WebServiceConfiguration {
     }
 
     /**
+     * 将 WebService 拦截器注册为 Bean
+     * <p>
+     * 使用 @Autowired
+     */
+    @Bean
+    public WebServicesHandlerInterceptor webServicesHandlerInterceptor() {
+        return new WebServicesHandlerInterceptor();
+    }
+
+    /**
      * 注册服务：用于测试的 用户 服务接口
      */
     @Bean
     public Endpoint testUser1ServiceEndpoint() {
         EndpointImpl testUser1ServiceEndpointImpl = new EndpointImpl(springBus(), testUser1Service);
         testUser1ServiceEndpointImpl.publish("/testUser1Service");
+
+        // 自定义 WebService 拦截器
+        testUser1ServiceEndpointImpl.getInInterceptors().add(webServicesHandlerInterceptor());
+
         return testUser1ServiceEndpointImpl;
     }
 
