@@ -12,6 +12,8 @@
     <artifactId>Spring-Boot-WebServices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Web-Services</name>
+    <!-- 打 war 包时必备，开发无影响 -->
+    <packaging>war</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -35,6 +37,12 @@
 
     <dependencies>
 
+        <!-- 仅在 打包方式为 war 时启用 -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>-->
 
         <!-- - MyBatis Plus Boot Starter -->
         <dependency>
