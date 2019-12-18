@@ -9,18 +9,60 @@ spring:
   #
   # 数据库 配置
   datasource:
-    # 数据库 驱动名称（包括包名）
-    # driver-class-name: oracle.jdbc.driver.OracleDriver
-    # p6spy 提供的驱动类
-    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-    # 数据库 URL
-    # url: jdbc:oracle:thin:@192.168.111.169:1521:ORCL
-    # 前缀为 jdbc:p6spy 跟着冒号为对应数据库连接地址
-    url: jdbc:p6spy:oracle:thin:@192.168.111.169:1521:ORCL
-    # 数据库 用户名
-    username: TESTSERVICE
-    # 数据库 密码
-    password: TESTSERVICE
+    #
+    #    # 单数据库
+    #    # 数据库 驱动名称（包括包名）
+    #    # 开发时使用：
+    #    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    #    # 数据库 URL
+    #    # 开发时使用：
+    #    url: jdbc:p6spy:oracle:thin:@192.168.8.131:1521:ORCL
+    #    # 生产时使用：
+    #    # url: jdbc:oracle:thin:@192.168.8.131:1521:ORCL
+    #    # 生产时使用：
+    #    # driver-class-name: oracle.jdbc.driver.OracleDriver
+    #    # 数据库 用户名
+    #    username: scott
+    #    # 数据库 密码
+    #    password: orcl
+    #
+    # 多数据源
+    # Oracle 数据库配置
+    oracle:
+      # 开发时使用：
+      driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+      # 开发时使用：
+      jdbc-url: jdbc:p6spy:oracle:thin:@192.168.8.131:1521:ORCL
+      # 生产时使用：
+      # driver-class-name: oracle.jdbc.driver.OracleDriver
+      # 生产时使用：
+      # jdbc-url: jdbc:oracle:thin:@192.168.8.131:1521:ORCL
+      username: scott
+      password: orcl
+    # MySQL 数据库配置
+    mysql:
+      # 开发时使用：
+      driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+      # 开发时使用：
+      jdbc-url: jdbc:p6spy:mysql://127.0.0.1:3306/service?useSSL=false&serverTimezone=GMT%2B8
+      # 生产时使用：
+      # driver-class-name: com.mysql.cj.jdbc.Driver
+      # 生产时使用：
+      # jdbc-url: jdbc:mysql://127.0.0.1:3306/service?useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root
+    # SQLServer 数据库配置
+    sqlserver:
+      # 开发时使用：
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      # 开发时使用：
+      jdbc-url: jdbc:p6spy:sqlserver://localhost:1433;DatabaseName=mydb
+      # 生产时使用：
+      # driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      # 生产时使用：
+      # jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=mydb
+      username: root
+      password: root
 #
 # MyBatis Plus 配置
 mybatis-plus:
