@@ -1,8 +1,8 @@
 package cn.com.xuxiaowei.configuration;
 
 import cn.com.xuxiaowei.handlerinterceptor.WebServicesHandlerInterceptor;
-import cn.com.xuxiaowei.service.TestUser1Service;
-import cn.com.xuxiaowei.service.WebServicesTestService;
+import cn.com.xuxiaowei.web.service.TestUser1Service;
+import cn.com.xuxiaowei.web.service.WebServicesTestService;
 import org.apache.cxf.Bus;
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.jaxws.EndpointImpl;
