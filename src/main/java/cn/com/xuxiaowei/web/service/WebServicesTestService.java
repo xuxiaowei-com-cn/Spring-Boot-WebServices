@@ -1,4 +1,4 @@
-package cn.com.xuxiaowei.service;
+package cn.com.xuxiaowei.web.service;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

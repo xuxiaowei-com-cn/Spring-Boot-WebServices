@@ -1,6 +1,6 @@
-package cn.com.xuxiaowei.service.impl;
+package cn.com.xuxiaowei.web.service.impl;
 
-import cn.com.xuxiaowei.service.WebServicesTestService;
+import cn.com.xuxiaowei.web.service.WebServicesTestService;
 import org.springframework.stereotype.Service;
 
 import javax.jws.WebService;

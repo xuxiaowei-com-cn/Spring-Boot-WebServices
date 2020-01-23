@@ -1,8 +1,8 @@
-package cn.com.xuxiaowei.service.impl;
+package cn.com.xuxiaowei.web.service.impl;
 
 import cn.com.xuxiaowei.entity.TestUser1;
 import cn.com.xuxiaowei.mapper.TestUser1Mapper;
-import cn.com.xuxiaowei.service.TestUser1Service;
+import cn.com.xuxiaowei.web.service.TestUser1Service;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,4 +1,4 @@
-package cn.com.xuxiaowei.service;
+package cn.com.xuxiaowei.web.service;
 
 import cn.com.xuxiaowei.entity.TestUser1;
 
