@@ -105,6 +105,9 @@ public class MultipleDataSourceConfiguration {
         MybatisConfiguration configuration = new MybatisConfiguration();
 
         configuration.setJdbcTypeForNull(JdbcType.NULL);
+        // 分页
+        configuration.addInterceptor(new MybatisPlusConfiguration().paginationInterceptor());
+
         configuration.setMapUnderscoreToCamelCase(true);
 
         sqlSessionFactory.setConfiguration(configuration);
