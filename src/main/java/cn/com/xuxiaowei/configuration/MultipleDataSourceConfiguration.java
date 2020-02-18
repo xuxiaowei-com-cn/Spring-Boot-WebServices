@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.type.JdbcType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -104,7 +103,6 @@ public class MultipleDataSourceConfiguration {
 
         MybatisConfiguration configuration = new MybatisConfiguration();
 
-        configuration.setJdbcTypeForNull(JdbcType.NULL);
         // 分页
         configuration.addInterceptor(new MybatisPlusConfiguration().paginationInterceptor());
 
