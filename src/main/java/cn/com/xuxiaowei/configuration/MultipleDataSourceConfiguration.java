@@ -107,8 +107,6 @@ public class MultipleDataSourceConfiguration {
         configuration.setJdbcTypeForNull(JdbcType.NULL);
         configuration.setMapUnderscoreToCamelCase(true);
 
-        // 缓存：默认为 true
-        configuration.setCacheEnabled(false);
         sqlSessionFactory.setConfiguration(configuration);
 
         return sqlSessionFactory.getObject();
