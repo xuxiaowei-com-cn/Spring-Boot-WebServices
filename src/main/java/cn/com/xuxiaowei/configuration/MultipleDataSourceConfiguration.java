@@ -71,7 +71,8 @@ public class MultipleDataSourceConfiguration {
      */
     @Bean
     @Primary
-    public DataSource multipleDataSource(@Qualifier("oracle") DataSource oracle, @Qualifier("mysql") DataSource mysql,
+    public DataSource multipleDataSource(@Qualifier("oracle") DataSource oracle,
+                                         @Qualifier("mysql") DataSource mysql,
                                          @Qualifier("sqlserver") DataSource sqlserver) {
         MultipleDataSource multipleDataSource = new MultipleDataSource();
         Map<Object, Object> targetDataSources = new HashMap<>(4);
