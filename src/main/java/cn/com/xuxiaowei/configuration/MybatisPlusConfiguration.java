@@ -11,12 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * <p>
  * 扫描 Mapper 接口
  * <p>
- * MyBatis Plus 性能分析插件
- * <p>
- * 性能分析拦截器，用于输出每条 SQL 语句及其执行时间
- * <p>
- * SQL 格式化
- * <p>
  * 分页插件
  *
  * @author xuxiaowei
