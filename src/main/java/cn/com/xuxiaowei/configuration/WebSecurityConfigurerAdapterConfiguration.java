@@ -157,8 +157,8 @@ public class WebSecurityConfigurerAdapterConfiguration extends WebSecurityConfig
     public void configure(WebSecurity web) {
 
         // 静态资源不拦截
-        web.ignoring().mvcMatchers("/static/css/**");
-        web.ignoring().mvcMatchers("/static/js/**");
+        web.ignoring().mvcMatchers("/css/**");
+        web.ignoring().mvcMatchers("/js/**");
 
     }
 
