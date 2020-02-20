@@ -12,4 +12,42 @@
         <result column="deleted" property="deleted" />
     </resultMap>
 
+    <!-- 用户及权限 查询映射结果 -->
+    <resultMap id="AuthoritiesBaseResultMap" type="cn.com.xuxiaowei.entity.UsersData">
+        <id column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="create_date" property="createDate" />
+        <result column="updata_date" property="updataDate" />
+        <result column="deleted" property="deleted" />
+
+        <!-- 一对多 -->
+        <collection property="authorities" ofType="cn.com.xuxiaowei.entity.Authorities">
+
+            <!-- 注意别名 -->
+            <id column="a_username" property="username"/>
+            <result column="authority" property="authority"/>
+
+        </collection>
+
+    </resultMap>
+
+    <!-- 根据用户名查询用户信息及权限 -->
+    <select id="selectAuthoritiesByUsername" resultMap="AuthoritiesBaseResultMap">
+        select
+            u.user_id,
+            u.username,
+            u.`password`,
+            u.create_date,
+            u.updata_date,
+            u.deleted,
+            a.username as a_username,
+            a.authority
+        from
+            user as u
+            left join authorities as a on a.username = u.username
+        where 1 = 1
+            and u.username = #{username}
+    </select>
+
 </mapper>
