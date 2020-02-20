@@ -57,6 +57,11 @@ spring:
       # jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=mydb
       username: root
       password: root
+  #
+  # 配置文件
+  profiles:
+    # 激活
+    active: security
 #
 # MyBatis Plus 配置
 mybatis-plus:

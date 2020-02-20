@@ -1,0 +1,25 @@
+# Security 配置
+#
+# 定制登录页面的访问 URL
+security:
+  login-page: /login
+  # 定制登录请求的访问 URL
+  login-processing-url: /login.json
+  # 定制登录失败后转向的 URL
+  failure-forward-url: /login/fail.json
+  # 定制登录成功后转向的 URL
+  default-target-url: /login/success.json
+  # 登录成功后，总是跳转到定制登录成功后转向的 URL
+  always-use-default-target-url: true
+  # 定制注销 URL（行为）
+  logout-url: /logout.json
+  # 注销成功后跳转的URL
+  logout-success-url: /logout/success.json
+  # 指定 Cookie 有效时间
+  token-validity-seconds: 3600
+  # 默认：remember-me
+  remember-me-parameter: rememberMe
+  # key 指定 Cookie 中的私钥
+  key: NV!lK12FhRM-Key+NV!lK12FhRM-Key+
+  # 允许授权配置异常处理，错误页面
+  access-denied-page: /accessDenied
