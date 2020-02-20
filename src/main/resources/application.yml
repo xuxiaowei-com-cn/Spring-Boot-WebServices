@@ -31,11 +31,9 @@ spring:
     oracle:
       # 开发时使用：
       driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-      # 开发时使用：
       jdbc-url: jdbc:p6spy:oracle:thin:@192.168.8.131:1521:ORCL
       # 生产时使用：
       # driver-class-name: oracle.jdbc.driver.OracleDriver
-      # 生产时使用：
       # jdbc-url: jdbc:oracle:thin:@192.168.8.131:1521:ORCL
       username: scott
       password: orcl
@@ -43,11 +41,9 @@ spring:
     mysql:
       # 开发时使用：
       driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-      # 开发时使用：
       jdbc-url: jdbc:p6spy:mysql://127.0.0.1:3306/service?useSSL=false&serverTimezone=GMT%2B8
       # 生产时使用：
       # driver-class-name: com.mysql.cj.jdbc.Driver
-      # 生产时使用：
       # jdbc-url: jdbc:mysql://127.0.0.1:3306/service?useSSL=false&serverTimezone=GMT%2B8
       username: root
       password: root
@@ -55,11 +51,9 @@ spring:
     sqlserver:
       # 开发时使用：
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-      # 开发时使用：
       jdbc-url: jdbc:p6spy:sqlserver://localhost:1433;DatabaseName=mydb
       # 生产时使用：
       # driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-      # 生产时使用：
       # jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=mydb
       username: root
       password: root
