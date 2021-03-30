@@ -2,7 +2,6 @@ package cn.com.xuxiaowei.web.service;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import javax.jws.WebService;
 
 /**
  * WebService 测试接口
@@ -10,7 +9,6 @@ import javax.jws.WebService;
  * @author xuxiaowei
  * @since 0.0.1
  */
-@WebService
 public interface WebServicesTestService {
 
     /**

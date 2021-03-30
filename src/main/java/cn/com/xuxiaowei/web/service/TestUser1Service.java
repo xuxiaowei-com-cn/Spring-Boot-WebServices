@@ -4,7 +4,6 @@ import cn.com.xuxiaowei.entity.TestUser1;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import javax.jws.WebService;
 
 /**
  * 测试 服务接口
@@ -12,7 +11,6 @@ import javax.jws.WebService;
  * @author xuxiaowei
  * @since 0.0.1
  */
-@WebService
 public interface TestUser1Service {
 
     /**
